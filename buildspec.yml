@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-version:
+      nodejs: 10
+  prebuild:
+    - npm install
+  build:
+    - npm run build
+artifacts:
+  files:
+    - "appspec.yml"
+    - "public/**/*"
+    - "src/**/*"
+    - "package.json"
+    - "build/**/*"
+    - "scripts/**/*"
