@@ -5,9 +5,11 @@ phases:
     runtime-version:
       nodejs: 10
   pre_build:
-    - npm install
+    commands:
+      - npm install
   build:
-    - npm run build
+    commands:
+      - npm run build
 artifacts:
   files:
     - "appspec.yml"
